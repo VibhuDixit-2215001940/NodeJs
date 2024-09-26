@@ -1,0 +1,34 @@
+<!-- include header -->
+<%- include('./partials/header') %>
+
+    <h1>Ye html nahi babu ejs hai !!</h1>
+    <!-- Ye hai apun ka bootstrap script -->
+    
+    <fieldset>
+        <legend>GET</legend>
+    <form action="/user" method="GET">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="username" required>
+
+        <label for="age">Age: </label>
+        <input type="number" id="age" name="userage" required>
+
+        <button type="submit">Submit</button>
+    </form>
+    <hr>
+    <br>
+    <hr>
+    <fieldset></fieldset>
+        <legend>POST</legend>
+    <form action="/user" method="POST">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="username" required>
+
+        <label for="age">Age: </label>
+        <input type="number" id="age" name="userage" required>
+
+        <button type="submit">Submit</button>
+    </form>
+    </fieldset>
+<!-- Include footer  -->
+<%- include('./partials/footer') %>
