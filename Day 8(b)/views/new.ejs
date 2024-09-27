@@ -1,0 +1,14 @@
+<%- include('./partials/header') %>
+<fieldset>
+    <legend>GET</legend>
+<form action="/blog" method="POST">
+    <label for="username">Name: </label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="comment">Age: </label>
+    <input type="text" id="comment" name="comment" required>
+
+    <button type="submit">Add Comment</button>
+</form>
+</fieldset>
+<%- include('./partials/footer') %>
