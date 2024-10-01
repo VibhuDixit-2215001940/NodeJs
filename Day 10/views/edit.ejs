@@ -1,0 +1,11 @@
+<%- include('./partials/header') %>
+<fieldset>
+    <legend>GET</legend>
+    <form action="/blog/<%= foundcomment.id %>?_method=PATCH" method="POST">
+        <input type="text" name="username" value="<%= foundcomment.username %>">
+        <textarea name="comment"><%= foundcomment.comment %></textarea>
+        <button type="submit">Update Blog</button>
+    </form>
+    
+</fieldset>
+<%- include('./partials/footer') %>
