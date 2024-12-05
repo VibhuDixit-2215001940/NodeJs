@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persons</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <h1>Hello you are seeing our Persons!!</h1>
+    <h1>Click on name to view!!</h1>
+    <ul>
+        <% persons.forEach(person => { %>
+            <li>
+                <a href="/person/<%= person._id %>"><%= person.name %></a>Age - <%= person.age %>
+            </li>
+        <% }) %>
+    </ul>
+    <a href="/create"><button style="margin-left: 750px;color: black;text-decoration: none;"><b>Create Person</b></button></a>
+    
+</body>
+</html>

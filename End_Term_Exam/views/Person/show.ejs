@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show: <%= persons.name %></title>
+    <link rel="stylesheet" href="/css/show.css">
+</head>
+<body>
+    <h1>Person Details</h1>
+    <p><strong>Name: </strong><%= persons.name %></p>
+    <p><strong>Age: </strong><%= persons.age %></p></p>
+    <p><strong>Email:</strong> <%= persons.email %></p>
+    <p><strong>DOB:</strong> <%= persons.DOB %></p>
+    <form action="/person/<%= persons._id %>/delete" method="post">
+        <button type="submit" style="background-color: red;">Delete Person</button>
+    </form>
+    <a href="/person/<%= persons._id %>/edit"><button style="background-color: rgb(156, 189, 244);">Edit Person</button></a><br>
+    <a href="/person"><button style="background-color: rgb(180, 240, 164);">Back to Person List</button></a><br>
+</body>
+</html>

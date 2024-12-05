@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit: <%= person.name %></title>
+    <link rel="stylesheet" href="/css/edit.css">
+</head>
+<body>
+    <form action="/person/<%= person._id %>/edit" method="post">
+        <label for="name">Enter person name:</label>
+        <input type="text" name="name" value="<%= person.name %>"><br>
+    
+        <label for="age">Enter the age:</label>
+        <input type="number" name="age" value="<%= person.age %>"><br>
+    
+        <label for="email">Enter the email:</label>
+        <input type="email" name="email" value="<%= person.email %>"><br>
+    
+        <label for="DOB">Enter the DOB:</label>
+        <input type="date" name="DOB" value="<%= person.DOB.toISOString().split('T')[0] %>"><br>
+    
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+</html>
